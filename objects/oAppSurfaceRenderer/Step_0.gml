@@ -1,0 +1,1 @@
+if (keyboard_check_pressed(ord("F"))) filter = (filter + 1) mod 3;
