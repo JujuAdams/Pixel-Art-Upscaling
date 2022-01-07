@@ -27,10 +27,10 @@ switch(filter)
         var _texelW = texture_get_texel_width(_texture);
         var _texelH = texture_get_texel_height(_texture);
         
-        shader_set(shdBoxFilter);
+        shader_set(shdCaseyMuratori);
         gpu_set_tex_filter(true);
-        shader_set_uniform_f(shader_get_uniform(shdBoxFilter, "u_vTexelSize"), _texelW, _texelH);
-        shader_set_uniform_f(shader_get_uniform(shdBoxFilter, "u_vScale"), _guiW/_surfW, _guiH/_surfH);
+        shader_set_uniform_f(shader_get_uniform(shdCaseyMuratori, "u_vTexelSize"), _texelW, _texelH);
+        shader_set_uniform_f(shader_get_uniform(shdCaseyMuratori, "u_vScale"), _guiW/_surfW, _guiH/_surfH);
         draw_surface_stretched(application_surface, 0, 0, _guiW, _guiH);
         shader_reset();
         gpu_set_tex_filter(false);
